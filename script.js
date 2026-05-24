@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    // =========================
-    // ANIMACIONES SCROLL
-    // =========================
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -20,9 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(el);
         });
 
-    // =========================
-    // NAV EFFECT
-    // =========================
     const nav = document.querySelector('nav');
 
     window.addEventListener('scroll', () => {
@@ -37,9 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // =========================
-    // DROPDOWN IDIOMAS (FIX)
-    // =========================
+
     const langDropdown = document.querySelector('.lang-dropdown');
     const langBtn = document.querySelector('.lang-btn');
 
@@ -67,9 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // =========================
-    // INIT
-    // =========================
+
     initCarousels();
     initReadMore();
 
@@ -78,10 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     changeLanguage(savedLang);
 });
 
-
-// =========================
-// READ MORE
-// =========================
 function initReadMore() {
     document.querySelectorAll('.read-more-btn').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -115,10 +100,6 @@ function updateReadMoreButton(btn, isOpen) {
         : `${t[0]} <span class="arrow">▼</span>`;
 }
 
-
-// =========================
-// CAROUSEL
-// =========================
 function initCarousels() {
 
     document.querySelectorAll('.project-carousel').forEach(carousel => {
@@ -183,9 +164,6 @@ function initCarousels() {
 }
 
 
-// =========================
-// LANGUAGE SYSTEM
-// =========================
 function changeLanguage(lang) {
 
     document.querySelectorAll('[data-es]').forEach(el => {
